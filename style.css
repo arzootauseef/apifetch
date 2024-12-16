@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+.container-fluid{
+    background-color: lightgray;
+}
+
+.topcourse{
+    background-color: lightcyan;
+}
+.img {
+    text-align: center;
+    background-color: lightgray;
+}
+.img img{
+    border:  2px solid black;
+    margin: 20px;
+    background-color: pink;
+}
+
+  .img img:hover{
+    width: 180px;
+    height: auto;
+    border: 2px solid rgb(144, 4, 95);
+    transition: 0.5s;
+}
+
+
+

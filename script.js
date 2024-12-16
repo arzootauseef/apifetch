@@ -1,29 +1,32 @@
-let api = "https://fakestoreapi.com/products"
- 
-async function getApi(url) {
- 
- 
-    let store = await fetch(url)
-    let data = await store.json()
- 
-    console.log(data);
+function submitData() {
 
-    let card = ""
- 
-    data.forEach(element => {
- 
-         card += `
-            
-            <div class="card m-3" style="width: 18rem;">
-        <img src= ${element.image} class="card-img-top" alt="img">
-        <div class="card-body">
-          <h5 class="card-title"><b> ${element.category}</b></h5>
-          <p class="card-text">${element.title}</p>
-          <h5 class="card-price"><b> ${element.price}</b></h5>
-          <a href="#" class="btn btn-primary">Add to Cart</a>
-        </div>
-      </div>           `
-    });
-        document.getElementById("display-products").innerHTML = card
-  }
-  getApi(api)
+    let username = document.getElementById("username").value;
+    let email = document.getElementById("email").value;
+    let number = document.getElementById("phone").value;
+    let msg = document.getElementById("msg").value;
+
+    if (username == "" || email == "" || number == "" || msg == "") {
+        alert("please fill the required field")
+    }
+    else {
+        let userdata = {
+            myusername: username,
+            myemail: email,
+            mynumber: number,
+            mymsg: msg
+        }
+        console.log(userdata);
+
+
+
+
+        username = document.getElementById("username").value = "";
+        email = document.getElementById("email").value = "";
+        number = document.getElementById("phone").value = "";
+        msg = document.getElementById("msg").value = "";
+    }
+
+}
+
+
+
